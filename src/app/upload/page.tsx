@@ -1,5 +1,7 @@
 import { Globe2, LockKeyhole, Settings2 } from "lucide-react";
 import { UploadZone } from "@/components/upload/UploadZone";
+import { UploadTagsField } from "@/components/upload/UploadTagsField";
+import { AVAILABLE_TAGS } from "@/lib/mock-tag-data";
 
 export default function UploadPage() {
   return (
@@ -47,15 +49,10 @@ export default function UploadPage() {
               </span>
             </label>
 
-            <label className="full-field">
-              Tags separadas por virgula
-              <input
-                name="tags"
-                placeholder="wedding, portrait, outdoor..."
-                type="text"
-              />
+            <div className="full-field">
+              <UploadTagsField availableTags={AVAILABLE_TAGS} />
               <small>Use termos consistentes para melhorar a busca na galeria.</small>
-            </label>
+            </div>
 
             <label className="full-field">
               Aviso de copyright
