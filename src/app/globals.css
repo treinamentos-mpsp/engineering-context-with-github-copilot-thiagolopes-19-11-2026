@@ -331,6 +331,37 @@ h1 {
   font-weight: 400;
 }
 
+.tag-autocomplete {
+  position: relative;
+  width: 100%;
+}
+
+.tag-suggestions {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 20px rgba(24, 33, 29, 0.12);
+  left: 0;
+  list-style: none;
+  margin: 0.35rem 0 0;
+  max-height: 15rem;
+  overflow-y: auto;
+  padding: 0.3rem;
+  position: absolute;
+  right: 0;
+  z-index: 5;
+}
+
+.tag-suggestions [role="option"] {
+  cursor: pointer;
+  padding: 0.65rem 0.75rem;
+}
+
+.tag-suggestions [role="option"]:hover,
+.tag-suggestions [role="option"][aria-selected="true"] {
+  background: rgba(23, 107, 82, 0.09);
+  color: var(--forest-dark);
+}
+
 .input-with-icon {
   position: relative;
 }
